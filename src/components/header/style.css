@@ -1,0 +1,9 @@
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-wrapper p{
+    font-size: 28px;
+}
