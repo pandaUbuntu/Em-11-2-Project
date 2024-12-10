@@ -8,7 +8,7 @@ type HeaderInfoType = {
 function Header(props: HeaderInfoType) {
   
     return (
-        <div className="header-wrapper">
+        <div className="header-wrapper gray-border">
             <div>
                 <p>Hello {props.userName}</p>
             </div>

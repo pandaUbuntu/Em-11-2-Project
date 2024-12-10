@@ -2,30 +2,21 @@ import CreateButton from '../../utils/createButton'
 import Input from '../../utils/input'
 import React, { useState } from 'react'
 import './style.css'
-import { CategoryType } from '../../../types/types';
+import { createCategory } from '../../../services/CategoryHelper'
 
-function CreateCategory() {
+type CreateCategoryType = {
+  handleAddCategory: () => void,
+}
+
+function CreateCategory(props:CreateCategoryType) {
     const [inputValue, setInputValue] = useState("");
 
     const handle:React.MouseEventHandler<HTMLButtonElement> = (event: React.MouseEvent) => {
-        if(inputValue.length === 0) {
-
+        if(inputValue.trim().length === 0) {
+            throw new Error("Please write a valid category name");
         }
-        else {
-            const newCategory:CategoryType = {
-                id: Math.random(),
-                name: inputValue
-            }
-    
-            let str:any = localStorage.getItem('categories');
-            if (str != null){
-                const list:CategoryType[] = JSON.parse(str);
-                list.push(newCategory);
-                localStorage.setItem('categories', JSON.stringify(list));
-            }
-        }
-        
-        console.log(localStorage.getItem('categories'));
+        createCategory(inputValue);
+        props.handleAddCategory();
     }
 
     const handleInputChange:Function = (value: string):void => {

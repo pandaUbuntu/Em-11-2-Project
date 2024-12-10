@@ -6,7 +6,6 @@ import Content from './components/content'
 
 function App() {
   const [budgetValue, setBudgetValue] = useState(0)
-  localStorage.setItem('categories', JSON.stringify([]));
 
   return (
     <div className='main'>

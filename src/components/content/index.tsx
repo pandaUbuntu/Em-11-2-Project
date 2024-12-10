@@ -3,7 +3,7 @@ import './style.css'
 function Content() {
   
     return (
-        <div className="content-wrapper">
+        <div className="content-wrapper gray-border">
 
         </div>
     )
