@@ -1,0 +1,18 @@
+.transaction-row-wrapper{
+    border: 2px solid #333;
+    margin: 20px;
+
+    span{
+        margin: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+.income-color{
+    background-color: #99c799d0;
+}
+
+.expense-color{
+    background-color: #e0a8a8af;
+}

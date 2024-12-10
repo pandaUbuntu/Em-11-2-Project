@@ -23,7 +23,6 @@ function CreateCategory(props:CreateCategoryType) {
         setInputValue(value)
     }
     
-
     return (
       <div>
         <div>
